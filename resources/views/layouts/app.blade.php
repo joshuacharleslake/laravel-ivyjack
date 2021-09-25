@@ -15,22 +15,22 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="https://kit.fontawesome.com/21d11f3326.js" crossorigin="anonymous"></script>
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
 
+    <section class="min-h-screen bg-gray-50" x-data="{ open: false }">
+        @include('layouts.navigation')
+        <div class="ml-0 transition md:ml-60">
             <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <header class="bg-gray-100 border-b border-gray-200">
+                <div class="max-w-full   mx-auto py-5 px-4 sm:px-6 lg:px-8">
                     {{ $header }}
                 </div>
             </header>
-
-            <!-- Page Content -->
-            <main>
+            <main class="p-4">
                 {{ $slot }}
             </main>
         </div>
-    </body>
+    </section>
 </html>

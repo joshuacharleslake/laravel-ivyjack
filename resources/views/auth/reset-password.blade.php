@@ -2,7 +2,7 @@
     <div
         class="w-full px-0 pt-5 pb-6 px-6 mx-auto mt-4 mb-0 mt-8 mb-5 space-y-4 bg-transparent border-0 border-gray-200 rounded-lg bg-white border sm:w-10/12 max-w-lg"
     >
-        <h1 class="mb-5 text-xl font-light text-left sm:text-center text-gray-800"> {{ __('Reset Password') }}</h1>
+        <h1 class="mb-5 text-xl font-bold text-left sm:text-center text-gray-800"> {{ __('Reset Password') }}</h1>
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
