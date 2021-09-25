@@ -10,11 +10,16 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Source Sans Pro', 'sans-serif'],
+            },
+
+            colors: {
+                'primary': '#f13000',
+
             },
         },
-    },
 
+    },
     variants: {
         extend: {
             opacity: ['disabled'],
