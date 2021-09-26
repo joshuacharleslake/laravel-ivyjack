@@ -117,13 +117,21 @@ class CompanyController extends Controller
         $company->email = $request->input('email');
         $company->website = $request->input('website');
 
+        $delete_existing_image = false;
+
         if ($request->hasFile('image')) {
+            $existing_image =  $company->image;
             $file_name = time() . '-' . $request->file('image')->getClientOriginalName();
             $request->image->storeAs('public/images/company-logos/', $file_name);
             $company->image = $file_name;
+            $delete_existing_image = true;
         }
 
         if ( $company->update() ) {
+            
+            if ( $delete_existing_image === true && isset($existing_image) ) {
+                Storage::delete('public/images/company-logos/' . $existing_image);
+            }
 
             return redirect()->route('companies.edit', ['company' => $company])
                 ->with('message', __('company.updated'));
