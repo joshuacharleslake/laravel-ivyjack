@@ -19,7 +19,8 @@ class AddEmployeesTable extends Migration
                 ->nullable();
             $table->foreign('company_id')
                 ->references('id')
-                ->on('companies');
+                ->on('companies')
+                ->onDelete('cascade');
             $table->string('first_name', 255);
             $table->string('last_name', 255);
             $table->string('email')->unique();

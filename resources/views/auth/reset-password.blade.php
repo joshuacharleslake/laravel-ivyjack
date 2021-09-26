@@ -5,7 +5,7 @@
         <h1 class="mb-5 text-xl font-bold text-left sm:text-center text-gray-800"> {{ __('Reset Password') }}</h1>
 
         <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        <x-validation-errors class="mb-4" :errors="$errors" />
 
         <form method="POST" action="{{ route('password.update') }}">
         @csrf
