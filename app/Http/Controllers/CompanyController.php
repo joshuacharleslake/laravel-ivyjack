@@ -128,7 +128,7 @@ class CompanyController extends Controller
         }
 
         if ( $company->update() ) {
-            
+
             if ( $delete_existing_image === true && isset($existing_image) ) {
                 Storage::delete('public/images/company-logos/' . $existing_image);
             }

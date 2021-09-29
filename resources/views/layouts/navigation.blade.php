@@ -29,10 +29,10 @@
         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
             {{ __('Dashboard') }}
         </x-nav-link>
-        <x-nav-link :href="route('companies.index')" :active="request()->routeIs('companies.index')">
+        <x-nav-link :href="route('companies.index')" :active="request()->routeIs('companies.index') || request()->is('companies/*')">
             {{ __('Companies') }}
         </x-nav-link>
-        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('login')">
+        <x-nav-link :href="route('employees.index')" :active="request()->routeIs('employees.index') || request()->is('employees/*')">
             {{ __('Employees') }}
         </x-nav-link>
         <form method="POST"

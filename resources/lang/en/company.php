@@ -15,4 +15,5 @@ return [
     'failed_to_delete' => 'Company failed to delete. Please try again.',
     'confirm_delete' => 'Do you really want to delete this company? Please note that any assigned employees will also be deleted and this process cannot be undone.',
     'company_image' => 'Company Image'
+
 ];

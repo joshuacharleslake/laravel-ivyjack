@@ -29,7 +29,9 @@
 
             <!-- Name -->
                 <div>
-                    <x-label for="name" :value="__('globals.name')" />
+                    <x-label for="name" :value="__('globals.name')" class="inline-block" />
+
+                    <span class="inline text-red-600">*</span>
 
                     <x-input id="name"
                              class="block mt-1 w-full"

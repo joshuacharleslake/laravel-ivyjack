@@ -23,8 +23,8 @@ class AddEmployeesTable extends Migration
                 ->onDelete('cascade');
             $table->string('first_name', 255);
             $table->string('last_name', 255);
-            $table->string('email')->unique();
-            $table->text('telephone', 11);
+            $table->string('email')->unique()->nullable();
+            $table->text('telephone', 11)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -3,6 +3,8 @@
 return [
     'id' => 'ID',
     'name' => 'Name',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
     'email' => 'Email',
     'website' => 'Website',
     'actions' => 'Actions',
@@ -14,5 +16,6 @@ return [
     'upload_image' => 'Upload Image',
     'no_results_found' => 'No results found.',
     'error_title' => 'There\'s been and error.',
-    'sucess' => 'Success',
+    'success' => 'Success',
+    'telephone' => 'Telephone'
 ];

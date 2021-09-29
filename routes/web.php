@@ -19,8 +19,11 @@ Route::group(['middleware' => 'auth'], function() {
         return view('dashboard');
     })->name('dashboard');
 
-    //Company
+    //Companies
     Route::resource('/companies', \App\Http\Controllers\CompanyController::class);
+
+    //Employees
+    Route::resource('/employees', \App\Http\Controllers\EmployeeController::class);
 
 });
 
